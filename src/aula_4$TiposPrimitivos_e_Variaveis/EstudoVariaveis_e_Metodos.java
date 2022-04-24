@@ -1,4 +1,4 @@
-package aula_4;
+package aula_4$TiposPrimitivos_e_Variaveis;
 
 public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui o mesmo nome do arquivo.
 	// CORPO DA CLASS
@@ -24,6 +24,7 @@ public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui 
 		int numero_1; //declaracao apenas
 		int numeroUm = 1; //declaracao + inicializacao
 		int UM = 1; //tudo maiusculo --> indica constante = variavel que nao sofrera alteracao de valor
+		Integer numero_Um = Integer.valueOf(numeroUm); //wrapper integer class
 		
 		//Formato dos metodos: TipoRetorno NOME_OBJETIVO_NO_INFINITIVO (Parametro(s)) --> metodos NAO PRECISAM ter parametros necessariamente
 		//quando o metodo nao retorn nada --> void Nome (Parametro)
@@ -42,7 +43,8 @@ public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui 
 		System.out.println(palavra); //palavra eh Rodrigo agora 
 		//A ORDEM IMPORTA!!!!!!!
 		// = means "get"
-	}
+	}	
+
 	
 	int contarLetras(String palavra) { //Eh mesmo necessario escrever um metodo assim do zero?? NAOOOO! Checar documentacao e ver o que a classe String
 									  // ja pode nos oferecer se eu quiser chamar o metodo em algum objeto da classe String. e.g. string.length(); 
@@ -50,6 +52,13 @@ public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui 
 		//CORPO DO METODO contar letras que vai agir em algum objeto da classe em que o metodo foi declarado - nesse caso EstudandoVariaveis_e_Metodos
 		 
 		int numeroLetras = 0;   
+		
+		//Por que variavel local de metodo tem que ser inicializada?
+		
+		//Detalhe:
+		
+		int cep = 02134567; //int omite o zero na impressao
+		String str_cep = "02134567";
 		
 		return numeroLetras; //--> metodo retorna um int
 		

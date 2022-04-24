@@ -1,4 +1,4 @@
-package aula_4;
+package aula_4$TiposPrimitivos_e_Variaveis;
 
 public class EstudoTiposPrimitivos {
 
@@ -9,8 +9,8 @@ public class EstudoTiposPrimitivos {
 	
 	public static void main(String[] args) {
 		
-		byte MAX_BYTE = 127; // 2s complement representation --> 8 bits --> 2^-7 to 2^7 - 1
-		byte MIN_BYTE = -128; 
+		final byte MAX_BYTE = 127; // 2s complement representation --> 8 bits --> 2^-7 to 2^7 - 1 --> usar a palavra final --> garante que nao pode ser alterada e eh realmente uma constante
+		final byte MIN_BYTE = -128; 
 		
 		short MAX_SHORT = (short) ((Math.pow(2, 15)) - 1);
 		short MIN_SHORT = (2^-15);			//hoje em dia quase nao se usam mais os tipos primitivos --> usam-se as Wrapper classes 
@@ -19,6 +19,9 @@ public class EstudoTiposPrimitivos {
 		
 		System.out.println(MAX_SHORT);
 		System.out.println(MIN_SHORT);
+		
+		int numeromaior = 34;
+		short numeromenor = (short) numeromaior; //NAO PODE CONVERTER DE TIPO MAIOR PRA MENOR --> para isso tem que fazer o cast (conversao de tipos)
 	}
 }
 

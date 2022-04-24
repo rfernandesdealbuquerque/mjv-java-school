@@ -1,4 +1,4 @@
-package aula_5;
+package aula_5$PrincipaisClasses_Java;
 
 public class Wrapper_class {
 	public static void main(String[] args) {
