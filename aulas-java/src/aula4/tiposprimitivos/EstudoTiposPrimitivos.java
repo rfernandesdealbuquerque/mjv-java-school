@@ -1,4 +1,4 @@
-package aula_4$TiposPrimitivos_e_Variaveis;
+package aula4.tiposprimitivos;
 
 public class EstudoTiposPrimitivos {
 

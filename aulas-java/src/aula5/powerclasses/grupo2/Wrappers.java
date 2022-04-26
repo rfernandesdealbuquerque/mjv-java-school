@@ -1,6 +1,6 @@
-package aula_5$PrincipaisClasses_Java;
+package aula5.powerclasses.grupo2;
 
-public class Wrapper_class {
+public class Wrappers {
 	public static void main(String[] args) {
 		int inteiro_primitivo = 10;
 		String s = "123";
@@ -28,7 +28,5 @@ public class Wrapper_class {
 		
 		
 		
-		
 	}
-
 }

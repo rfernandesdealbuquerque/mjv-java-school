@@ -1,4 +1,4 @@
-package aula_4$TiposPrimitivos_e_Variaveis;
+package aula4.variaveismetodos;
 
 public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui o mesmo nome do arquivo.
 	// CORPO DA CLASS
@@ -27,7 +27,7 @@ public class EstudoVariaveis_e_Metodos { //sempre comeca com MAIUSCULA e possui 
 		Integer numero_Um = Integer.valueOf(numeroUm); //wrapper integer class
 		
 		//Formato dos metodos: TipoRetorno NOME_OBJETIVO_NO_INFINITIVO (Parametro(s)) --> metodos NAO PRECISAM ter parametros necessariamente
-		//quando o metodo nao retorn nada --> void Nome (Parametro)
+		//quando o metodo nao retorna nada --> void Nome (Parametro)
 		//todo metodo pertence a uma classe especifica e vai atuar nos objetos dessa classe
 		//e.g. Strings (sequence of characters) are objects in Java. Java provides the String class with methods to manipulate string objects
 		

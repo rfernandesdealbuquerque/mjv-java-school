@@ -1,4 +1,4 @@
-package aula_6_parte1$OOP_ClassesObjetosConstrutores;
+package aula6.parte1.OOP.ClassesObjetosConstrutores;
 
 //classe Aviao que vai especificar os atributos e metodos dos objetos pertencentes a ela.
 //A classe serve como molde para a criacao de objetos -> Com essa classe queremos possibilitar a criacao de objetos que representem avioes no mundo real
@@ -17,14 +17,17 @@ public class Aviao {
 	//deixando tudo mais organizado
 	//ESSENCIAL PARA UM AVIAO EXISTIR: modelo + construtora; o veiculo aviao pode estar ou nao associado a alguma companhia aerea
 	Aviao(String modelo, String construtora){
-		this(modelo, construtora, "N/A"); //Construtor chamando o outro --> DUVIDA: O construtor que eh chamado eh sempre o que tem mais parametros?
+		this(modelo, construtora, "N/A"); //Construtor chamando o outro --> 
+										 //DUVIDA: O construtor que eh chamado eh sempre o que tem mais parametros?
+										//SIM! E o construtor sobrecarregado deve estar sempre "embaixo" dos nao sobrecarregados nesse caso do this
+										//senao da erro: Constructor call must be the first statement in a constructor
 	}
 	
 	Aviao(String modelo, String construtora, String companhiaAerea){
 		this.modelo = modelo;
 		this.construtora = construtora;
 		this.companhiaAerea = companhiaAerea;
-	
+		
 	//Esses dois construtores sao exemplos de metodos sobrecarregados --> duas maneiras de chamar o mesmo metodo: uma com mais e outra com menos parametros
 	}
 	

@@ -1,4 +1,4 @@
-package aula_6_parte1$OOP_ClassesObjetosConstrutores;
+package aula6.parte1.OOP.ClassesObjetosConstrutores;
 
 public class Aeroporto {
 	public static void main(String [] args) {
