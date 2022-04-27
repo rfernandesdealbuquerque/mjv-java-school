@@ -1,4 +1,4 @@
-package com.mjv.agualuznotification.case1;
+package com.mjv.agualuznotification.case2;
 
 public class GeradorMensagem {
 	public static String gerarMensagem(Contrato contrato) {
@@ -31,6 +31,22 @@ public class GeradorMensagem {
 		+ contrato.getCadastro().getEnderecoCadastro().getCidade().getSiglaCidade());
 		sb.append("\n\u2022");
 		sb.append("Cep: " + contrato.getCadastro().getEnderecoCadastro().getCep());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		return sb.toString();
 		
