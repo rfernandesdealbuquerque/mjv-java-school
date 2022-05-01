@@ -1,14 +1,20 @@
-package com.mjv.agualuznotification.case1;
+package com.mjv.agualuznotification.case1.service;
+
+import com.mjv.agualuznotification.case1.model.Cadastro;
+import com.mjv.agualuznotification.case1.model.Contrato;
+import com.mjv.agualuznotification.case1.model.Endereco;
 
 public class GeradorMensagem {
 	public static String gerarMensagem(Contrato contrato) {
 		
 		StringBuilder sb = new StringBuilder();
 		
+		Cadastro cadastro = contrato.getCadastro();
+		Endereco endereco = cadastro.getEnderecoCadastro();
+		
 		sb.append("Senhor(a) ");
-		sb.append(contrato.getCadastro().getNomeCadastro());
-		sb.append(" cpf de numero ");
-		sb.append(contrato.getCadastro().getCpfCadastro());
+		
+		sb.append(String.format("Senhor(a) %s cpf de numero %s " , cadastro.getNomeCadastro(), cadastro.getCpfCadastro()));
 		sb.append(", Informamos que conforme contrato com protocolo de numero ");
 		sb.append(contrato.getProtocolo());
 		sb.append(" esta\n");
@@ -21,16 +27,16 @@ public class GeradorMensagem {
 		sb.append(" em sua residência localizada no\n");
 		sb.append("endereço abaixo:\n\n");
 		sb.append("\u2022");
-		sb.append("Logradouro: " + contrato.getCadastro().getEnderecoCadastro().getLogradouro());
+		sb.append("Logradouro: " + endereco.getLogradouro() + ", " + endereco.getNumero());
 		sb.append("\n\u2022");
-		sb.append("Complemento: " + contrato.getCadastro().getEnderecoCadastro().getComplemento());
+		sb.append("Complemento: " + endereco.getComplemento());
 		sb.append("\n\u2022");
-		sb.append("Bairro: " + contrato.getCadastro().getEnderecoCadastro().getBairro());
+		sb.append("Bairro: " + endereco.getBairro());
 		sb.append("\n\u2022");
-		sb.append("Cidade: " + contrato.getCadastro().getEnderecoCadastro().getCidade().getNomeCidade() + " / " 
-		+ contrato.getCadastro().getEnderecoCadastro().getCidade().getSiglaCidade());
+		sb.append("Cidade: " + endereco.getCidade() + " / " 
+		+ endereco.getEstado());
 		sb.append("\n\u2022");
-		sb.append("Cep: " + contrato.getCadastro().getEnderecoCadastro().getCep());
+		sb.append("Cep: " + endereco.getCep());
 		
 		return sb.toString();
 		

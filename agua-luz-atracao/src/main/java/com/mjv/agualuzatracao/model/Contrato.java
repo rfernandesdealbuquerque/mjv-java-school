@@ -1,4 +1,4 @@
-package com.mjv.agualuznotification.case1;
+package com.mjv.agualuzatracao.model;
 
 import java.time.LocalDateTime;
 

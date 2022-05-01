@@ -1,6 +1,12 @@
-package com.mjv.agualuznotification.case2;
+package com.mjv.agualuznotification.case1.app;
 
-public class SistemaContratosCadastros {
+import com.mjv.agualuznotification.case1.model.Cadastro;
+import com.mjv.agualuznotification.case1.model.Contrato;
+import com.mjv.agualuznotification.case1.service.GeradorCadastro;
+import com.mjv.agualuznotification.case1.service.GeradorContrato;
+import com.mjv.agualuznotification.case1.service.GeradorMensagem;
+
+public class SistemaAguaLuzNotification {
 	public static void main(String[] args) {
 		Cadastro cadastro1 = new Cadastro();
 		cadastro1 = GeradorCadastro.gerarCadastro();

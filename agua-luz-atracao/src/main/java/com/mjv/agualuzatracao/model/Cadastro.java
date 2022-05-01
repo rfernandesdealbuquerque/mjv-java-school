@@ -1,4 +1,4 @@
-package com.mjv.agualuznotification.case2;
+package com.mjv.agualuzatracao.model;
 
 public class Cadastro {
 	private String nomeCadastro;

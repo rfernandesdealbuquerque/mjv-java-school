@@ -1,6 +1,10 @@
-package com.mjv.agualuznotification.case1;
+package com.mjv.agualuznotification.case1.service;
 
 import java.time.LocalDateTime;
+
+import com.mjv.agualuznotification.case1.model.Cadastro;
+import com.mjv.agualuznotification.case1.model.Contrato;
+import com.mjv.agualuznotification.case1.model.TipoServico;
 
 public class GeradorContrato {
 	public static Contrato gerarContrato(Cadastro cadastro) {

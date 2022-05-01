@@ -1,12 +1,10 @@
-package com.mjv.agualuznotification.case2;
+package com.mjv.agualuznotification.case1.model;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Contrato {
 	private String protocolo;
-	private LocalDate data;
-	private LocalTime hora;
+	private LocalDateTime dataHora;
 	private TipoServico servico;
 	private Double valor;
 	private Cadastro cadastro;
@@ -27,20 +25,12 @@ public class Contrato {
 		this.protocolo = protocolo;
 	}
 
-	public LocalDate getData() {
-		return data;
+	public LocalDateTime getDataHora() {
+		return dataHora;
 	}
 
-	public void setData(LocalDate data) {
-		this.data = data;
-	}
-
-	public LocalTime getHora() {
-		return hora;
-	}
-
-	public void setHora(LocalTime hora) {
-		this.hora = hora;
+	public void setDataHora(LocalDateTime dataHora) {
+		this.dataHora = dataHora;
 	}
 
 	public TipoServico getServico() {
