@@ -40,9 +40,11 @@ public class Contrato {
 
 	public void setServico(TipoServico servico) { //PRINCIPIO DE ENCAPSULAMENTO - definir valor do contrato automaticamente com o servico para mitigar erros
 		this.servico = servico;
-		this.valor = servico.getValorServico();
 	}
 
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
 	public Double getValor() {
 		return valor;
 	}

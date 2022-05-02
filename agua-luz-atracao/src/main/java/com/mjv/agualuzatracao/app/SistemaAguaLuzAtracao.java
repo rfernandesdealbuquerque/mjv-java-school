@@ -28,10 +28,10 @@ public class SistemaAguaLuzAtracao {
 				   "São Paulo", "Sp", "27.310.657");
 		
 		//gerando contratos a partir do cadastros
-		Contrato contrato1 = GeradorContrato.gerarContrato(cadastro1, "1984365", LocalDateTime.of(2022, 05, 07, 15, 21), 
-												  TipoServico.AGUA, TipoNotificacao.SMS);
+		Contrato contrato1 = GeradorContrato.gerarContrato(cadastro1, "1984365", LocalDateTime.of(2022, 05, 07, 15, 21), TipoServico.AGUA,
+												  TipoServico.AGUA.getValorServico(), TipoNotificacao.SMS);
 		Contrato contrato2 = GeradorContrato.gerarContrato(cadastro2, "2022025687", LocalDateTime.of(2022, 02, 21, 16, 00), 
-				  TipoServico.AGUA, TipoNotificacao.WHATS);
+				  TipoServico.AGUA, TipoServico.AGUA.getValorServico(), TipoNotificacao.WHATS);
 
 		
 		//String conteudo = GeradorMensagem.gerarMensagem(contrato1); //gerando conteudo para impressao a partir do contrato
