@@ -33,7 +33,7 @@ public class SistemaAguaLuzAtracao {
 		Contrato contrato2 = GeradorContrato.gerarContrato(cadastro2, "2022025687", LocalDateTime.of(2022, 02, 21, 16, 00), 
 				  TipoServico.AGUA, TipoServico.AGUA.getValorServico(), TipoNotificacao.WHATS);
 
-		
+		//w
 		//String conteudo = GeradorMensagem.gerarMensagem(contrato1); //gerando conteudo para impressao a partir do contrato
 		//System.out.println(conteudo);
 		
