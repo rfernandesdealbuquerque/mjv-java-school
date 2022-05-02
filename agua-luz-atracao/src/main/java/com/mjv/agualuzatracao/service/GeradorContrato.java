@@ -14,7 +14,6 @@ public class GeradorContrato {
 		contrato.setProtocolo("2022025687");
 		contrato.setDataHora(LocalDateTime.of(2022, 02, 21, 16, 00));
 		contrato.setServico(TipoServico.AGUA);
-		contrato.setValor(127.33);
 		contrato.setCadastro(cadastro);
 		
 		
