@@ -31,6 +31,7 @@ public class SistemaAguaLuzNotificacao {
 			
 			String conteudo = GeradorMensagem.gerarMensagem(contrato); //gerando conteudo para impressao a partir do contrato
 			System.out.println(conteudo + "\n");
+			//w
 		} 
 		
 		
