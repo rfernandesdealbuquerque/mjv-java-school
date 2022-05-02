@@ -23,7 +23,7 @@ public class SistemaAguaLuzAtracao {
 		String conteudo = GeradorMensagem.gerarMensagem(contrato1); //gerando conteudo para impressao a partir do contrato
 		System.out.println(conteudo);
 		
-		List<Contrato> contratos = ContratosRepository.getListaContratos();
+		List<Contrato> contratos = ContratosRepository.getListaContratos(); //duvida - como esse objeto eh criado? como funciona o fluxo de compilacao e execucao depois de main?
 		ContratosRepository.adicionarContrato(contratos, contrato1); //adicionando contrato gerado a lista de contratos
 		
 		GeradorArquivoCSV.gerarCSV(contratos); //gerando CSV baseado na lista de contratos
