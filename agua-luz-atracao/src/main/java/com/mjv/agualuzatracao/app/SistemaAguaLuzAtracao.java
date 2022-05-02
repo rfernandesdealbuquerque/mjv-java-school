@@ -10,6 +10,7 @@ import com.mjv.agualuzatracao.model.TipoNotificacao;
 import com.mjv.agualuzatracao.model.TipoServico;
 import com.mjv.agualuzatracao.repository.ContratosRepository;
 import com.mjv.agualuzatracao.service.GeradorArquivoCsv;
+import com.mjv.agualuzatracao.service.GeradorArquivoTxt;
 import com.mjv.agualuzatracao.service.GeradorCadastro;
 import com.mjv.agualuzatracao.service.GeradorContrato;
 import com.mjv.agualuzatracao.service.GeradorMensagem;
@@ -41,6 +42,7 @@ public class SistemaAguaLuzAtracao {
 		ContratosRepository.adicionarContrato(contratos, contrato2);
 		
 		GeradorArquivoCsv.gerarCsv(contratos); //gerando CSV baseado na lista de contratos
+		GeradorArquivoTxt.gerarTxt(contratos);
 	}
 }
 
