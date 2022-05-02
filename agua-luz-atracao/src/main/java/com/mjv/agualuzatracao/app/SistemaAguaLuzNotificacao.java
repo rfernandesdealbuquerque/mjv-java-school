@@ -1,5 +1,12 @@
 package com.mjv.agualuzatracao.app;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,8 +25,11 @@ public class SistemaAguaLuzNotificacao {
 		
 		
 		List<String> contratos = LerArquivoTxt.lerTxt();
+		File dir = new File("C:/dev/mjv-java-school/agua-luz-output");
+		int count = 0;
 		
 		for (String c : contratos) {
+			count ++;
 			Cadastro cadastro = GeradorCadastro.gerarCadastro(c.substring(21,51).trim(), c.substring(0,11).trim(), c.substring(11,21).trim(), c.substring(51,62).trim(), 
 										  c.substring(153,155) == "BR" ? Pais.BRASIL : (c.substring(153, 155) == "US" ? Pais.EUA : Pais.ALEMANHA), 
 										  c.substring(62, 82).trim(), c.substring(82, 88).trim(), c.substring(88, 98).trim(), c.substring(98, 113).trim(), 
@@ -31,7 +41,13 @@ public class SistemaAguaLuzNotificacao {
 			
 			String conteudo = GeradorMensagem.gerarMensagem(contrato); //gerando conteudo para impressao a partir do contrato
 			System.out.println(conteudo + "\n");
-			//w
+			Path path = Paths.get(dir.getAbsolutePath(), "contrato-" + String.valueOf(count) + ".txt");
+			try {
+				Files.write(path, conteudo.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
 		} 
 		
 		
