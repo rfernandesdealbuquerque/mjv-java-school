@@ -4,6 +4,7 @@ public class Cadastro {
 	private String nomeCadastro;
 	private String cpfCadastro;
 	private String rgCadastro;
+	private String celCadastro;
 	private Endereco enderecoCadastro;
 	private Pais pais;
 	
@@ -42,6 +43,12 @@ public class Cadastro {
 	}
 	public void setRgCadastro(String rgCadastro) {
 		this.rgCadastro = rgCadastro;
+	}
+	public String getCelCadastro() {
+		return celCadastro;
+	}
+	public void setCelCadastro(String celCadastro) {
+		this.celCadastro = celCadastro;
 	}
 
 }

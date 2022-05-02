@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 import com.mjv.agualuzatracao.model.Pais;
 
-public class FormatadorDataLayoutToOriginalUtil {
-	public static String formatarDataHora(LocalDateTime dataHora, String iso2) {
+public class FormatadorDataLocalDateToOriginal {
+	public static String formatarDataHora(LocalDateTime dataHora, String iso2) { //formata objeto LocalDateTime no formato string correto de acordo com pais
 		
 		String dataHoraFormatado;
 		

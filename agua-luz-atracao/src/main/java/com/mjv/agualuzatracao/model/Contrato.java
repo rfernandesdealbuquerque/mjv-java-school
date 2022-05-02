@@ -6,6 +6,7 @@ public class Contrato {
 	private String protocolo;
 	private LocalDateTime dataHora;
 	private TipoServico servico;
+	private TipoNotificacao notificacao;
 	private Double valor;
 	private Cadastro cadastro;
 	
@@ -44,6 +45,14 @@ public class Contrato {
 
 	public Double getValor() {
 		return valor;
+	}
+
+	public TipoNotificacao getNotificacao() {
+		return notificacao;
+	}
+
+	public void setNotificacao(TipoNotificacao notificacao) {
+		this.notificacao = notificacao;
 	}
 
 	

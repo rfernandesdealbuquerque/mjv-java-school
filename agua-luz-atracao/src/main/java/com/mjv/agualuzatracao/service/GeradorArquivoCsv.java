@@ -6,14 +6,16 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 import com.mjv.agualuzatracao.model.Cadastro;
 import com.mjv.agualuzatracao.model.Contrato;
 import com.mjv.agualuzatracao.model.Endereco;
+import com.mjv.agualuzatracao.util.FormatadorDataLocalDateToOriginal;
 
-public class GeradorArquivoCSV {
-	public static void gerarCSV(List<Contrato> contratos){
+public class GeradorArquivoCsv {
+	public static void gerarCsv(List<Contrato> contratos){//recebe a lista de contratos i.e. nosso banco de dados
 		 
 		File dir = new File("C:/dev/mjv-java-school/agua-luz-output"); 
 		
@@ -22,7 +24,6 @@ public class GeradorArquivoCSV {
 			 try {
 				Files.createDirectories(path);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -38,13 +39,27 @@ public class GeradorArquivoCSV {
 			sb.append(cad.getCpfCadastro() + ";");
 			sb.append(cad.getRgCadastro() + ";");
 			sb.append(cad.getNomeCadastro() + ";");
-			
+			sb.append(cad.getCelCadastro() + ";");
+			sb.append(end.getLogradouro() + ";");
+			sb.append(end.getNumero() + ";");
+			sb.append(end.getComplemento() + ";");
+			sb.append(end.getBairro() + ";");
+			sb.append(end.getCidade() + ";");
+			sb.append(end.getEstado() + ";");
+			sb.append(end.getCep() + ";");
+			sb.append(cad.getPais().getNomePais() + ";");
+			sb.append(c.getProtocolo() + ";");
+			String dataHoraFormatado = FormatadorDataLocalDateToOriginal.formatarDataHora(c.getDataHora(), cad.getPais().getISO2());
+			sb.append(dataHoraFormatado.substring(0, 10) + ";");
+			sb.append(dataHoraFormatado.substring(11,16) + ";");
+			sb.append(c.getServico() + ";");
+			sb.append(c.getValor() + ";");
+			sb.append(c.getNotificacao() + ";\n");
 			
 			//escrever contrato (sb) no arquivo csv
 			try {
-				Files.write(path, sb.toString().getBytes(StandardCharsets.UTF_8));
+				Files.write(path, sb.toString().getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

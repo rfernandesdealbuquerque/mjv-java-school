@@ -3,7 +3,7 @@ package com.mjv.agualuzatracao.service;
 import com.mjv.agualuzatracao.model.Cadastro;
 import com.mjv.agualuzatracao.model.Contrato;
 import com.mjv.agualuzatracao.model.Endereco;
-import com.mjv.agualuzatracao.util.FormatadorDataLayoutToOriginalUtil;
+import com.mjv.agualuzatracao.util.FormatadorDataLocalDateToOriginal;
 
 public class GeradorMensagem {
 	public static String gerarMensagem(Contrato contrato) {
@@ -18,7 +18,7 @@ public class GeradorMensagem {
 		sb.append(contrato.getProtocolo());
 		sb.append(" esta\n");
 		sb.append("agendado para a data\\hora ");
-		sb.append(FormatadorDataLayoutToOriginalUtil.formatarDataHora(contrato.getDataHora(), cadastro.getPais().getISO2()));
+		sb.append(FormatadorDataLocalDateToOriginal.formatarDataHora(contrato.getDataHora(), cadastro.getPais().getISO2()));
 		sb.append(" a instalacao do servico de ");
 		sb.append(contrato.getServico().getServico());
 		sb.append(" com taxa de valor R$ ");

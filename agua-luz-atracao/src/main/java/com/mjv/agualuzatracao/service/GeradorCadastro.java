@@ -5,23 +5,26 @@ import com.mjv.agualuzatracao.model.Endereco;
 import com.mjv.agualuzatracao.model.Pais;
 
 public class GeradorCadastro {
-	public static Cadastro gerarCadastro() { //static nao precisa de objeto, eh metodo da classe e deve retornar um objeto cadastro
+	public static Cadastro gerarCadastro(String nome, String cpf, String rg, String cel, Pais pais, 
+										 String logradouro, String numero, String complemento, String bairro, 
+										 String cidade, String estado,  String cep) { //static nao precisa de objeto, eh metodo da classe e deve retornar um objeto cadastro
 		
 		Cadastro cadastro = new Cadastro();
 		
-		cadastro.setNomeCadastro("Gleyson Sampaio");
-		cadastro.setCpfCadastro("234.765.987-27");
-		cadastro.setRgCadastro("33765-5");
-		cadastro.setPais(Pais.BRASIL);
+		cadastro.setNomeCadastro(nome);
+		cadastro.setCpfCadastro(cpf);
+		cadastro.setRgCadastro(rg);
+		cadastro.setCelCadastro(cel);
+		cadastro.setPais(pais);
 		
 		Endereco enderecoCadastro = new Endereco();
-		enderecoCadastro.setLogradouro(" Rua das Marias");
-		enderecoCadastro.setNumero("243");
-		enderecoCadastro.setComplemento("Ap 207, Bloco C");
-		enderecoCadastro.setCidade("Sao Paulo");
-		enderecoCadastro.setEstado("SP");
-		enderecoCadastro.setBairro("Santo Antonio");
-		enderecoCadastro.setCep("27.310.657");
+		enderecoCadastro.setLogradouro(logradouro);
+		enderecoCadastro.setNumero(numero);
+		enderecoCadastro.setComplemento(complemento);
+		enderecoCadastro.setCidade(cidade);
+		enderecoCadastro.setEstado(estado);
+		enderecoCadastro.setBairro(bairro);
+		enderecoCadastro.setCep(cep);
 		
 		cadastro.setEnderecoCadastro(enderecoCadastro);
 		
