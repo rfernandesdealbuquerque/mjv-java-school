@@ -1,10 +1,10 @@
-package com.mjv.agualuznotification.case1.app;
+package com.mjv.agualuzcase1.app;
 
-import com.mjv.agualuznotification.case1.model.Cadastro;
-import com.mjv.agualuznotification.case1.model.Contrato;
-import com.mjv.agualuznotification.case1.service.GeradorCadastro;
-import com.mjv.agualuznotification.case1.service.GeradorContrato;
-import com.mjv.agualuznotification.case1.service.GeradorMensagem;
+import com.mjv.agualuzcase1.model.Cadastro;
+import com.mjv.agualuzcase1.model.Contrato;
+import com.mjv.agualuzcase1.service.GeradorCadastro;
+import com.mjv.agualuzcase1.service.GeradorContrato;
+import com.mjv.agualuzcase1.service.GeradorMensagem;
 
 public class SistemaAguaLuzNotification {
 	public static void main(String[] args) {

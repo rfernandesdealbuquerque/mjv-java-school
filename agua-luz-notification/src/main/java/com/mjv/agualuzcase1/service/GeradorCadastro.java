@@ -1,7 +1,7 @@
-package com.mjv.agualuznotification.case1.service;
+package com.mjv.agualuzcase1.service;
 
-import com.mjv.agualuznotification.case1.model.Cadastro;
-import com.mjv.agualuznotification.case1.model.Endereco;
+import com.mjv.agualuzcase1.model.Cadastro;
+import com.mjv.agualuzcase1.model.Endereco;
 
 public class GeradorCadastro {
 	public static Cadastro gerarCadastro() { //static nao precisa de objeto, eh metodo da classe e deve retornar um objeto cadastro

@@ -1,4 +1,4 @@
-package com.mjv.agualuznotification.case1.model;
+package com.mjv.agualuzcase1.model;
 
 public enum TipoServico {
 	AGUA("Agua"),
