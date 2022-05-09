@@ -8,7 +8,7 @@ public class EstudoOperadores {
 	}
 
 	public static void exemploConcatenacao() {
-		String contatenacao = "1"+(1+1+1)+"1"; //So imprime 11111 sem parenteses ou quando comeca com string "1"
+		String contatenacao ="1"+1+1+1+"1"; //So imprime 11111 sem parenteses e quando comeca com string "1"
 		System.out.println(contatenacao);
 	}
 	

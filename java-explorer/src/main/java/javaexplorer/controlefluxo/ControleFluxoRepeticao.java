@@ -19,10 +19,13 @@ public class ControleFluxoRepeticao {
 			int litragemFaltandoComecoDia = litragemPiscina - litragemEnchida;
 			litragemEnchida += litragemEnchida + encherHoje;
 			dias ++;
-			if(litragemEnchida<500000)
-				System.out.println("Joao encheu " + encherHoje + " litros no " + dias + " dia. Ainda faltam " + 
-				(litragemPiscina - litragemEnchida) + " litros.");
-			else System.out.println("Joao encheu " + litragemFaltandoComecoDia + " litros no " + dias + " dia. Piscina cheia!");
+			int l = litragemPiscina - litragemEnchida;
+			if(litragemEnchida<500000) {
+				System.out.println("Joao encheu " + encherHoje + " litros no " + dias + " dia. Ainda faltam " + l + " litros.");
+			}
+			else {
+				System.out.println("Joao encheu " + litragemFaltandoComecoDia + " litros no " + dias + " dia. Piscina cheia!");
+			}
 		}
 		
 		System.out.println("Joao terminou de encher a piscina em " + dias + " dias.");
