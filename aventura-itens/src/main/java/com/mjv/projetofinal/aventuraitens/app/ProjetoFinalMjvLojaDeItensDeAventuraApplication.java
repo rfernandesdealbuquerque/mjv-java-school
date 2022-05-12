@@ -1,4 +1,4 @@
-package com.mjv.projetofinal.aventuraitens;
+package com.mjv.projetofinal.aventuraitens.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
