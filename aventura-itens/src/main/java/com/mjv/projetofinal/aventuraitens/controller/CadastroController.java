@@ -32,7 +32,7 @@ public class CadastroController {
 	}
 	
 	@PutMapping("/alterarCadastro/{idCadastro}")
-	public String alterarCadastro(@PathVariable Integer idCadastro, Cadastro cadastro) {
+	public String alterarCadastro(@PathVariable Integer idCadastro, @RequestBody Cadastro cadastro) {
 		return cadastroService.alterarCadastro(idCadastro, cadastro);
 	}
 	@DeleteMapping(value = "deletarCadastro/{idCadastro}")
