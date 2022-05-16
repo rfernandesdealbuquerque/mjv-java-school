@@ -1,4 +1,4 @@
-package com.mjv.projetofinal.aventuraitens.model.produto;
+package com.mjv.projetofinal.aventuraitens.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

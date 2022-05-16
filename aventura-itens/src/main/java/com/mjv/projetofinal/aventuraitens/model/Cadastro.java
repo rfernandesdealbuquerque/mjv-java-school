@@ -1,6 +1,8 @@
-package com.mjv.projetofinal.aventuraitens.model.cadastro;
+package com.mjv.projetofinal.aventuraitens.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -8,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 @Entity
@@ -18,10 +21,10 @@ public class Cadastro {
 	@Column(name = "cadastro_id")
 	private Integer id;
 	
-	@Column(length = 60 )
+	@Column
 	private String nome;
 	
-	@Column(length = 20)
+	@Column
 	private String cpf;
 	
 	@Column(name = "data_nascimento")
@@ -30,11 +33,30 @@ public class Cadastro {
 	@Embedded
 	private Endereco endereco;
 	
+	@Column(name = "data_hora_inclusao")
+	private LocalDateTime dataHoraInclusao;
+	
+	@PrePersist
+	protected void onCreate() {
+		if (this.dataHoraInclusao == null)
+			this.dataHoraInclusao = LocalDateTime.now();
+	}
+	
+	
+	//---------
 	public Endereco getEndereco() {
 		return endereco;
 	}
+
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+	
+	public LocalDateTime getDataHoraInclusao() {
+		return dataHoraInclusao;
+	}
+	public void setDataHoraInclusao(LocalDateTime dataHoraInclusao) {
+		this.dataHoraInclusao = dataHoraInclusao;
 	}
 	public Integer getId() {
 		return this.id;

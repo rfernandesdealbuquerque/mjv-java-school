@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mjv.projetofinal.aventuraitens.model.produto.Aventura;
 import com.mjv.projetofinal.aventuraitens.repository.AventuraRepository;
+import com.mjv.projetofinal.aventuraitens.model.Aventura;
 
 @Service
 public class AventuraService {

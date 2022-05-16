@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mjv.projetofinal.aventuraitens.model.produto.Aventura;
+import com.mjv.projetofinal.aventuraitens.model.Aventura;
 import com.mjv.projetofinal.aventuraitens.service.AventuraService;
 
 @RestController

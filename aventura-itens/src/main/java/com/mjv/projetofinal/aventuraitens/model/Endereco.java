@@ -1,4 +1,4 @@
-package com.mjv.projetofinal.aventuraitens.model.cadastro;
+package com.mjv.projetofinal.aventuraitens.model;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
@@ -9,7 +9,7 @@ public class Endereco {
 	private String numero;
 	private String complemento;
 	private String cidade;
-	private String uf;
+	private String estado;
 	
 	public String getLogradouro() {
 		return logradouro;
@@ -35,11 +35,11 @@ public class Endereco {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	public String getUf() {
-		return uf;
+	public String getEstado() {
+		return this.estado;
 	}
-	public void setUf(String uf) {
-		this.uf = uf;
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 	

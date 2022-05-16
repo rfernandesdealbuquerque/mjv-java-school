@@ -1,4 +1,4 @@
-package com.mjv.projetofinal.aventuraitens.model.produto;
+package com.mjv.projetofinal.aventuraitens.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +22,7 @@ public class Produto {
 	private Integer quantidadeEmEstoque;
 
 	@ManyToOne
-	@JoinColumn(name = "avent_id", referencedColumnName = "aventura_id")
+	@JoinColumn(name = "id_aventura", referencedColumnName = "aventura_id")
 	private Aventura aventura;
 	
 	
