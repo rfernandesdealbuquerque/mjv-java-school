@@ -22,7 +22,7 @@ public class Produto {
 	private Integer quantidadeEmEstoque;
 
 	@ManyToOne
-	@JoinColumn(name = "id_aventura", referencedColumnName = "aventura_id")
+	@JoinColumn(name = "aventura_id")
 	private Aventura aventura;
 	
 	

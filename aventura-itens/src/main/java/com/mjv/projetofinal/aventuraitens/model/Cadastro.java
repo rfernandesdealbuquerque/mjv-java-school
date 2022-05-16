@@ -30,6 +30,7 @@ public class Cadastro {
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
 	
+	
 	@Embedded
 	private Endereco endereco;
 	
