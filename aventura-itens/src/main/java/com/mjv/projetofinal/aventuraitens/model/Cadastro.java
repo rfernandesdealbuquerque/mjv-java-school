@@ -46,7 +46,6 @@ public class Cadastro {
 			this.dataHoraInclusao = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
 	}
 	
-	
 	//---------
 	public Endereco getEndereco() {
 		return endereco;
