@@ -59,17 +59,25 @@ public class ProdutoService {
 		return "Produto de id " + produtoAtualizado.getId() + " alterado com sucesso!";
 		
 	}
+	
+	public void atualizarEstoque(Integer id, Integer quantidadeComprada) {
+		Produto produtoAtualizado = produtoRepository.findById(id).orElse(null);
+		Integer quantidadeEmEstoque = produtoAtualizado.getQuantidadeEmEstoque();
+		Integer novaQuantidadeEmEstoque = quantidadeEmEstoque - quantidadeComprada;
+		produtoAtualizado.setQuantidadeEmEstoque(novaQuantidadeEmEstoque);
+		produtoRepository.save(produtoAtualizado);
+	}
 
 	public List<Produto> listarTodos() {
 		return produtoRepository.findAll();
 	}
 	
-	public String deletarProduto(Integer id) {
-		Produto produtoDeletado = produtoRepository.findById(id).orElse(null);
+	public String deletarProduto(Integer idProduto) {
+		Produto produtoDeletado = produtoRepository.findById(idProduto).orElse(null);
 		if(produtoDeletado == null) {
 			return "id do produto não existe! Favor consultar produtos e inserir id correto.";
 		}
-		produtoRepository.deleteById(id);
+		produtoRepository.deleteById(idProduto);
 		return "Produto de id " + produtoDeletado.getId() + " de nome " + produtoDeletado.getNomeProduto() + " deletado com sucesso!";
 	}
 

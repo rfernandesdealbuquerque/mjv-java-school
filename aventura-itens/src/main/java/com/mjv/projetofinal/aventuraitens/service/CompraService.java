@@ -28,6 +28,9 @@ public class CompraService {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
+	@Autowired
+	private ProdutoService produtoService;
+	
 	public String adicionarCompra(CompraDto compraDto) {
 		Compra compra = new Compra();
 		Cadastro cadastro = new Cadastro();
@@ -61,6 +64,16 @@ public class CompraService {
 		}
 	
 		compraRepository.save(compra);
-		return "Compra adicionada com sucesso ao cadastro de id " + cadastroCompra.getId();
+		
+		String retornarNomesEstoqueAtualizado = "";
+		
+		for(ItemComprado item : compra.getItensComprados()) {
+			produtoService.atualizarEstoque(item.getProduto().getId(), item.getQuantidade());
+			retornarNomesEstoqueAtualizado += produtoRepository.findById(item.getProduto().getId()).orElse(null).getNomeProduto() + ", ";
+		}
+		retornarNomesEstoqueAtualizado = retornarNomesEstoqueAtualizado.substring(0, retornarNomesEstoqueAtualizado.length() - 2);
+		
+		return "-Compra adicionada com sucesso ao cadastro de id " + cadastroCompra.getId() + "\n" + 
+			   "-Estoques dos produtos de nome " + retornarNomesEstoqueAtualizado + " foram atualizados com sucesso!";
 	}
 }
