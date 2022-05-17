@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/AventuraLogo.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/AventuraLogo.png"/>
 </p>
 <h1 align="center">Loja Itens de Aventura do Seu Joao - Projeto Final da MJV School Java</h1>
 
