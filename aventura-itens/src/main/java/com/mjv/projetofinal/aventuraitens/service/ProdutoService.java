@@ -72,6 +72,10 @@ public class ProdutoService {
 		return produtoRepository.findAll();
 	}
 	
+	public List<Produto> listarPorAventura(Integer idAventura) {
+		return produtoRepository.findByAventuraId(idAventura);
+	}
+	
 	public String deletarProduto(Integer idProduto) {
 		Produto produtoDeletado = produtoRepository.findById(idProduto).orElse(null);
 		if(produtoDeletado == null) {

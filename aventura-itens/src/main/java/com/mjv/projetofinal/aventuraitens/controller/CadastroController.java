@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mjv.projetofinal.aventuraitens.dto.CadastroDto;
 import com.mjv.projetofinal.aventuraitens.model.Cadastro;
 import com.mjv.projetofinal.aventuraitens.service.CadastroService;
 
@@ -22,7 +23,7 @@ public class CadastroController {
 	private CadastroService cadastroService;
 	
 	@PostMapping("/adicionarCadastro")
-	public String adicionarCadastro(@RequestBody Cadastro cadastro) {
+	public String adicionarCadastro(@RequestBody CadastroDto cadastro) {
 		return cadastroService.adicionarCadastro(cadastro);
 	}
 	
@@ -32,7 +33,7 @@ public class CadastroController {
 	}
 	
 	@PutMapping("/alterarCadastro/{idCadastro}")
-	public String alterarCadastro(@PathVariable Integer idCadastro, @RequestBody Cadastro cadastro) {
+	public String alterarCadastro(@PathVariable Integer idCadastro, @RequestBody CadastroDto cadastro) {
 		return cadastroService.alterarCadastro(idCadastro, cadastro);
 	}
 	

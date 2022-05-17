@@ -1,6 +1,7 @@
 package com.mjv.projetofinal.aventuraitens.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mjv.projetofinal.aventuraitens.dto.ProdutoDto;
@@ -37,6 +39,11 @@ public class ProdutoController {
 	@GetMapping("/listarTodos")
 	public List<Produto> listarTodos(){
 		return produtoService.listarTodos();
+	}
+	
+	@GetMapping("/listarPorAventura/{idAventura}")
+	public List<Produto> listarPorAventura(@PathVariable ("idAventura") Integer aventura){
+		return produtoService.listarPorAventura(aventura);
 	}
 	
 	//@DeleteMapping("deletarProduto/{idProduto}")

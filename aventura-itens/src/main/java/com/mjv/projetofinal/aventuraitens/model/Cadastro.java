@@ -34,9 +34,30 @@ public class Cadastro {
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
 	
+	@Column
+	private String whatsapp;
+	
+	@Column
+	private String email;
+	
 	@Embedded
 	private Endereco endereco;
 	
+	public String getWhatsapp() {
+		return whatsapp;
+	}
+
+	public void setWhatsapp(String whatsapp) {
+		this.whatsapp = whatsapp;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	@Column(name = "data_hora_inclusao")
 	private LocalDateTime dataHoraInclusao;
 	
