@@ -76,4 +76,22 @@ public class CompraService {
 		return "-Compra adicionada com sucesso ao cadastro de id " + cadastroCompra.getId() + "\n" + 
 			   "-Estoques dos produtos de nome " + retornarNomesEstoqueAtualizado + " foram atualizados com sucesso!";
 	}
+	
+	public Compra buscarCompra(Integer idCompra) {
+		Compra compra = compraRepository.findById(idCompra).orElse(null);
+		return compra;
+		
+	}
+	
+	public List<Compra> listarPorCadastro(Integer idCadastro) {
+		List<Compra> compra = compraRepository.findByCadastroId(idCadastro);
+		return compra;
+		
+	}
+	
+	public List<Compra> listarTodas(){
+		return compraRepository.findAll();
+	}
 }
+
+
