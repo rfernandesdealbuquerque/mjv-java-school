@@ -3,13 +3,17 @@ package com.mjv.projetofinal.aventuraitens.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
@@ -30,7 +34,6 @@ public class Cadastro {
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
 	
-	
 	@Embedded
 	private Endereco endereco;
 	
@@ -40,7 +43,7 @@ public class Cadastro {
 	@PrePersist
 	protected void onCreate() {
 		if (this.dataHoraInclusao == null)
-			this.dataHoraInclusao = LocalDateTime.now();
+			this.dataHoraInclusao = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
 	}
 	
 	

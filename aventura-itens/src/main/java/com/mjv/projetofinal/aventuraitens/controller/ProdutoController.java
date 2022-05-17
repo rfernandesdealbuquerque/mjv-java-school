@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mjv.projetofinal.aventuraitens.dto.ProdutoDto;
 import com.mjv.projetofinal.aventuraitens.model.Produto;
 import com.mjv.projetofinal.aventuraitens.service.ProdutoService;
 
@@ -22,13 +23,13 @@ public class ProdutoController {
 	private ProdutoService produtoService;
 	
 	@PostMapping("/adicionarProduto")
-	public String adicionarProduto(@RequestBody Produto produto) {
+	public String adicionarProduto(@RequestBody ProdutoDto produto) {
 		return produtoService.adicionarProduto(produto);
 		
 	}
 	
 	@PutMapping("alterarProduto/{idProduto}")
-	public String alterarProduto(@PathVariable Integer idProduto, @RequestBody Produto produto){
+	public String alterarProduto(@PathVariable Integer idProduto, @RequestBody ProdutoDto produto){
 		return produtoService.alterarProduto(idProduto, produto);
 		
 	}
@@ -38,10 +39,10 @@ public class ProdutoController {
 		return produtoService.listarTodos();
 	}
 	
-	@DeleteMapping("deletarProduto/{idProduto}")
-	public String deletarProduto(@PathVariable Integer idProduto) {
-		return produtoService.deletarProduto(idProduto);
-	}
+	//@DeleteMapping("deletarProduto/{idProduto}")
+	//public String deletarProduto(@PathVariable Integer idProduto) {
+		//return produtoService.deletarProduto(idProduto);
+	//}
 	
 	
 

@@ -35,10 +35,11 @@ public class CadastroController {
 	public String alterarCadastro(@PathVariable Integer idCadastro, @RequestBody Cadastro cadastro) {
 		return cadastroService.alterarCadastro(idCadastro, cadastro);
 	}
-	@DeleteMapping(value = "deletarCadastro/{idCadastro}")
-	public String deletarCadastro(@PathVariable Integer idCadastro) {
-		return cadastroService.deletarCadastro(idCadastro);
-	}
+	
+	//@DeleteMapping(value = "deletarCadastro/{idCadastro}")
+	//public String deletarCadastro(@PathVariable Integer idCadastro) {
+		//return cadastroService.deletarCadastro(idCadastro);
+	//}
 	
 	
 	

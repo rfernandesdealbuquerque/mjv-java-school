@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mjv.projetofinal.aventuraitens.dto.ProdutoDto;
 import com.mjv.projetofinal.aventuraitens.model.Aventura;
 import com.mjv.projetofinal.aventuraitens.model.Produto;
 import com.mjv.projetofinal.aventuraitens.repository.AventuraRepository;
@@ -20,29 +21,38 @@ public class ProdutoService {
 	private AventuraRepository aventuraRepository;
 	
 	
-	public String adicionarProduto(Produto produto) {
-		//Optional<Aventura> checarAventuraByName = aventuraRepository.findByNomeAventuraContaining(produto.getAventura().getNomeAventura());
+	public String adicionarProduto(ProdutoDto produtoDto) {
+		Produto produto = new Produto();
+		produto.setNomeProduto(produtoDto.getNomeProduto());
+		produto.setDescricao(produtoDto.getDescricao());
+		produto.setPreco(produtoDto.getPreco());
+		produto.setQuantidadeEmEstoque(produtoDto.getQuantidadeEmEstoque());
+		Aventura aventura = new Aventura();
+		aventura.setId(produtoDto.getIdAventura());
+		produto.setAventura(aventura);
 		if(aventuraRepository.findById(produto.getAventura().getId()).orElse(null) == null) {
 			return "id da aventura não existe! Favor consultar aventuras e inserir Id correto ou criar nova aventura.";
 		}
-		produtoRepository.save(produto);
-		return "Produto de nome " + produto.getNomeProduto() + "adicionado com sucesso!";
+		produtoRepository.save(produto); 
+		return "Produto de nome " + produto.getNomeProduto() + " adicionado com sucesso!";
 		
 	}
 
-	public String alterarProduto(Integer id, Produto produto) {
+	public String alterarProduto(Integer id, ProdutoDto produtoDto) {
 		Produto produtoAtualizado = produtoRepository.findById(id).orElse(null);
 		if(produtoAtualizado == null) {
 			return "id do produto não existe! Favor consultar produtos e inserir id correto ou adicionar novo produto.";
 		}
-		if(aventuraRepository.findById(produto.getAventura().getId()).orElse(null) == null) {
+		if(aventuraRepository.findById(produtoDto.getIdAventura()).orElse(null) == null) {
 			return "id da aventura não existe! Favor consultar aventuras e inserir Id correto ou criar nova aventura.";
 		}
-		produtoAtualizado.setAventura(produto.getAventura());
-		produtoAtualizado.setDescricao(produto.getDescricao());
-		produtoAtualizado.setNomeProduto(produto.getNomeProduto());
-		produtoAtualizado.setPreco(produto.getPreco());
-		produtoAtualizado.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque()); //Usar para alterar estoque
+		Aventura aventura = new Aventura();
+		aventura.setId(produtoDto.getIdAventura());
+		produtoAtualizado.setAventura(aventura);
+		produtoAtualizado.setDescricao(produtoDto.getDescricao());
+		produtoAtualizado.setNomeProduto(produtoDto.getNomeProduto());
+		produtoAtualizado.setPreco(produtoDto.getPreco());
+		produtoAtualizado.setQuantidadeEmEstoque(produtoDto.getQuantidadeEmEstoque()); //Usar para alterar estoque
 		
 		produtoRepository.save(produtoAtualizado);
 	

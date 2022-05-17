@@ -1,6 +1,7 @@
 package com.mjv.projetofinal.aventuraitens.model;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 @Entity
@@ -28,22 +30,29 @@ public class Compra {
 	@JoinColumn(name = "compra_id")
 	private List<ItemComprado> itensComprados;
 	
-	@ManyToOne //uma compra necessitara sempre de um cadastro para ser criada; sem cascade porque se compra deletada, nao queremos que cadastro seja deletado
+	@ManyToOne//uma compra necessitara sempre de um cadastro para ser criada; sem cascade porque se compra deletada, nao queremos que cadastro seja deletado
 	@JoinColumn(name = "cadastro_id")
-	private Integer cadastroId;
+	private Cadastro cadastro;
 	
+	@Column(name = "data_hora_compra")
 	private LocalDateTime dataHoraCompra;
+	
+	@PrePersist
+	protected void onCreate() {
+		if (this.dataHoraCompra == null)
+			this.dataHoraCompra = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
+	}
 
 	public Integer getId() {
 		return id;
 	}
 
-	public Integer getCadastroId() {
-		return cadastroId;
+	public Cadastro getCadastro() {
+		return cadastro;
 	}
 
-	public void setCadastroId(Integer cadastroId) {
-		this.cadastroId = cadastroId;
+	public void setCadastro(Cadastro cadastro) {
+		this.cadastro = cadastro;
 	}
 
 	public void setId(Integer id) {
