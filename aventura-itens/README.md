@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/B2YvGD5/output-onlinepngtools.png" alt="Sublime's custom image"/>
+  <img src="" alt="Sublime's custom image"/>
 </p>
 <h1 align="center">Loja Itens de Aventura do Seu Joao - Projeto Final da MJV School Java</h1>
 
