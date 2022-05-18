@@ -12,7 +12,7 @@ O Projeto Final consiste em considerarmos um contexto hipotético (criado pelo p
 ## 💭 Contexto 
 <p align="center">"Seu Joao foi um amante de aventuras sua vida inteira. Ama esse nicho. Porem, com a idade, nao pode mais fazer esportes radicais. Entao, decidiu abrir uma loja de itens de aventura para se manter perto de sua paixao e conhecer outros amantes de adrenalina.
 
- <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/SeuJoao.png" alt="Sublime's custom image" width="150"/>
+ <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/SeuJoao.png" alt="Sublime's custom image" width="150" align="right"/>
 "</p>
 
 ## ✅ Objetivo
