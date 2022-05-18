@@ -6,7 +6,10 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +19,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
+import com.mjv.projetofinal.aventuraitens.service.TipoPagamentoService;
+
+
 @Entity
 @Table(name = "compras")
 public class Compra {
@@ -24,7 +30,9 @@ public class Compra {
 	@Column(name = "compra_id")
 	private Integer id;
 	private Double valorTotal;
-	private String TipoPagamento;
+	
+	@Enumerated(EnumType.STRING)
+	private TipoPagamento tipoPagamento;
 	
 	@OneToMany(cascade = CascadeType.ALL) //ao inserirmos uma compra, queremos que isso reflita no banco de itens comprados
 	@JoinColumn(name = "compra_id")
@@ -67,12 +75,12 @@ public class Compra {
 		this.valorTotal = valorTotal;
 	}
 
-	public String getTipoPagamento() {
-		return TipoPagamento;
+	public TipoPagamento getTipoPagamento() {
+		return this.tipoPagamento;
 	}
 
 	public void setTipoPagamento(String tipoPagamento) {
-		TipoPagamento = tipoPagamento;
+		this.tipoPagamento = TipoPagamentoService.StringtoTipoPagamento(tipoPagamento);
 	}
 
 	public List<ItemComprado> getItensComprados() {

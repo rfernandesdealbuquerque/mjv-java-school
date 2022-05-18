@@ -64,7 +64,7 @@ public class CompraService {
 		if(cadastroCompra == null) {
 			return "id do cadastro não existe! Favor consultar cadastros e inserir id correto ou adicionar novo cadastro antes de incluir compra.";
 		}
-		if(!Arrays.asList("DEBITO", "CREDITO", "DINHEIRO", "PIX").contains(compra.getTipoPagamento())){
+		if(compra.getTipoPagamento() == null){
 			return "Tipo pagamento especificado de maneira incorreta. Digite DEBITO, CREDITO, DINHEIRO ou PIX."; 
 		}
 	
