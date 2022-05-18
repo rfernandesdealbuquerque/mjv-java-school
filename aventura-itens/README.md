@@ -21,7 +21,7 @@ Seu João: "Quero um sistema simples e consistente que eu e os meus parceiros po
 
 ## ❔ Por que uma API REST?
 
-As lojas parceiras provavelmente já possuem o seu próprio sistema, diferente do da loja de João. Assim, ao disponibilizar os recursos em uma API, todas as lojas parceiras podem integrá-lo rapidamente aos seus próprios sistemas, podendo assim gerenciar e interagir também com o negócio de Seu João.
+As lojas parceiras provavelmente já possuem o seu próprio sistema, diferente do da loja de João. Assim, ao disponibilizar os recursos em uma API REST, todas as lojas parceiras podem integrá-lo rapidamente aos seus próprios sistemas, podendo assim gerenciar e interagir também com o negócio de Seu João.
 
 ## 📦 Desenvolvimento
 

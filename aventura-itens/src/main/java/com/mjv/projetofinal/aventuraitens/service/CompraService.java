@@ -1,6 +1,7 @@
 package com.mjv.projetofinal.aventuraitens.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class CompraService {
 	
 	@Autowired
 	private ProdutoService produtoService;
+			
 	
 	public String adicionarCompra(CompraDto compraDto) {
 		Compra compra = new Compra();
@@ -62,6 +64,9 @@ public class CompraService {
 		if(cadastroCompra == null) {
 			return "id do cadastro não existe! Favor consultar cadastros e inserir id correto ou adicionar novo cadastro antes de incluir compra.";
 		}
+		if(!Arrays.asList("DEBITO", "CREDITO", "DINHEIRO", "PIX").contains(compra.getTipoPagamento())){
+			return "Tipo pagamento especificado de maneira incorreta. Digite DEBITO, CREDITO, DINHEIRO ou PIX."; 
+		}
 	
 		compraRepository.save(compra);
 		
@@ -74,7 +79,7 @@ public class CompraService {
 		retornarNomesEstoqueAtualizado = retornarNomesEstoqueAtualizado.substring(0, retornarNomesEstoqueAtualizado.length() - 2);
 		
 		return "-Compra adicionada com sucesso ao cadastro de id " + cadastroCompra.getId() + "\n" + 
-			   "-Estoques dos produtos de nome " + retornarNomesEstoqueAtualizado + " foram atualizados com sucesso!";
+			   "-Estoque dos produtos de nome " + retornarNomesEstoqueAtualizado + " foram atualizados com sucesso!";
 	}
 	
 	public Compra buscarCompra(Integer idCompra) {
