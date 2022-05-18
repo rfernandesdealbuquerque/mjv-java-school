@@ -10,14 +10,18 @@ O Projeto Final consiste em considerarmos um contexto hipotético (criado pelo p
 
 
 ## 💭 Contexto 
-Seu João foi um amante de aventuras a sua vida inteira. Porém, com a idade, não pode mais fazer atividades radicais. Então, decidiu abrir uma loja de itens de aventura para se manter perto de sua paixão e conhecer outros amantes de adrenalina.
+Seu João foi um amante de aventuras a sua vida inteira. Porém, com a idade, não pode mais fazer atividades radicais. Há alguns anos atrás, decidiu abrir uma pequena loja de itens de aventura para se manter perto de sua paixão e potencializar outros amantes de adrenalina. Hoje, seu João está expandindo o seu negócio e quer realizar novas parcerias para disponibilizar os seus produtos em outras lojas.
 
  <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/SeuJoao.png" alt="Sublime's custom image" width="150" align="right"/>
 
 
 ## ✅ Objetivo
 
-Seu João: "Quero uma plataforma simples e consistente onde eu possa gerenciar o meu estoque de produtos, além de gerenciar cadastros de clientes e compras feitas em minha loja. Todas as informações devem ser armazenadas em um banco de dados."
+Seu João: "Quero um sistema simples e consistente que eu e os meus parceiros possam utilizar para gerenciar o estoque de produtos, cadastros de clientes e compras realizadas de itens da minha loja. Todas as informações devem ser armazenadas em um banco de dados."
+
+## ❔ Por que uma API REST?
+
+As lojas parceiras provavelmente já possuem o seu próprio sistema, diferente do da loja de João. Assim, ao disponibilizar os recursos em uma API, todas as lojas parceiras podem integrá-lo rapidamente aos seus próprios sistemas, podendo assim gerenciar e interagir também com o negócio de Seu João.
 
 ## 📦 Desenvolvimento
 
