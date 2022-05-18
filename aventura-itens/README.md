@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/AventuraLogo.png" alt="Sublime's custom image" width="200"/>
 </p>
-<h1 align="center">Loja Itens de Aventura do Seu Joao - Projeto Final da MJV School Java</h1>
+<h1 align="center">Loja Itens de Aventura - Projeto Final da MJV School Java</h1>
 
 ## 🐣 Introdução
 Neste repositório está armazenado o código-fonte do Projeto Final desenvolvido para a MJV School Java.
