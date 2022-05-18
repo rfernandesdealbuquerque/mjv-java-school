@@ -27,7 +27,7 @@ As lojas parceiras provavelmente já possuem o seu próprio sistema, diferente d
 
 Inicialmente foi desenvolvido um Diagrama de classes UML para conceber visualmente a estrutura do projeto:
 
-![Diagrama](https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/diagrama-uml-aventura-itens.png)
+![Diagrama](https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/diagram-uml-aventura-itens.png)
 
 Com o Diagrama mapeado, fica mais fácil implementar os relacionamentos entre as entidades do projeto. 
 
