@@ -10,14 +10,14 @@ O Projeto Final consiste em considerarmos um contexto hipotético (criado pelo p
 
 
 ## 💭 Contexto 
-Seu Joao foi um amante de aventuras sua vida inteira. Ama esse nicho. Porem, com a idade, nao pode mais fazer esportes radicais. Entao, decidiu abrir uma loja de itens de aventura para se manter perto de sua paixao e conhecer outros amantes de adrenalina.
+Seu João foi um amante de aventuras a sua vida inteira. Porém, com a idade, não pode mais fazer atividades radicais. Então, decidiu abrir uma loja de itens de aventura para se manter perto de sua paixão e conhecer outros amantes de adrenalina.
 
  <img src="https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/SeuJoao.png" alt="Sublime's custom image" width="150" align="right"/>
 
 
 ## ✅ Objetivo
 
-Seu Joao: "-Quero uma plataforma simples e consistente onde eu possa gerenciar o meu estoque de produtos, alem de gerenciar cadastros e compras feitas pelos usuarios. Todas as informacoes devem ser armazenadas em um banco de dados."
+Seu João: "Quero uma plataforma simples e consistente onde eu possa gerenciar o meu estoque de produtos, além de gerenciar cadastros de clientes e compras feitas em minha loja. Todas as informações devem ser armazenadas em um banco de dados."
 
 ## 📦 Desenvolvimento
 
