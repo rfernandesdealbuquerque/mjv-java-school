@@ -23,7 +23,7 @@ Seu João: "Quero uma plataforma simples e consistente onde eu possa gerenciar o
 
 Inicialmente foi desenvolvido um Diagrama de classes UML para conceber visualmente a estrutura do projeto:
 
-![Diagrama]()
+![Diagrama](https://github.com/rodrigoflu/mjv-java-school/blob/main/aventura-itens/diagram-uml-aventura-itens.png)
 
 Com o Diagrama mapeado, fica mais fácil implementar os relacionamentos entre as entidades do projeto. 
 
